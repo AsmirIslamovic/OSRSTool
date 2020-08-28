@@ -7,13 +7,27 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 
 import { fetchItemsForSlot } from './api';
+import { EquipmentTree } from './components';
 import styles from './App.module.css';
 
-// const apiURL = "https://www.osrsbox.com/osrsbox-db/items-icons/";
+const apiURL = "https://www.osrsbox.com/osrsbox-db/items-icons/";
 
 class App extends React.Component {
     state = {
-        itemId: 200,
+        itemId: 839,
+        gear: {
+            Head:null,
+            Cape:null,
+            Neck:null,
+            Ammo:null,
+            Weapon:null,
+            Body:null,
+            Shield:null,
+            Legs:null, 
+            Hands:null,
+            Feet:null,
+            Ring:null},
+        selected:null,
     }
 
     async componentDidMount() {
@@ -21,11 +35,17 @@ class App extends React.Component {
 
         console.log(fetchedData);
     }
+
+    handleSlotSelection = async(slot) => {
+        console.log("Picked: "+slot);
+        this.setState({selected:slot});
+    }
     
     render() {
-        const { itemId,open } = this.state;
-        console.log(itemId);
-        // const itemURL = `${apiURL}${itemId}.png`
+        const { itemId,gear,selected,open } = this.state;
+        const itemURL = `${apiURL}${itemId}.png`;
+        gear.Head = itemURL;
+        gear.Ammo = itemURL;
         return (
             <div>
                 <Drawer
@@ -45,10 +65,7 @@ class App extends React.Component {
                 </Drawer>
                 <main className={styles.content}>
                     <div>
-                        <img src="./images/Equipment_tree.png" alt="poop"/>
-                        <p>
-                            Hi
-                        </p>
+                        <EquipmentTree gear={gear} selected={selected} handleSlotSelection={this.handleSlotSelection}/>
                     </div>
                     
                 </main>

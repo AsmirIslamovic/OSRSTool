@@ -1,0 +1,100 @@
+.content {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.equipmentTree {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.equipment {
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    padding-left: 2px;
+    padding-top: 2px;
+    z-index: 2;
+}
+
+.equipment:hover {
+    border: dashed 2px  red;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-top: 0px;
+    height: 36px;
+    width: 36px;
+}
+
+.selected_equipment {
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    z-index: 2;
+    border: solid 2px  green;
+    border-radius: 5px;
+}
+
+.head {
+    top: -2px;
+    left: 54px;
+}
+
+.cape {
+    top: 37px;
+    left: 13px;
+}
+
+.neck {
+    top: 37px;
+    left: 54px;
+}
+
+.ammo {
+    top: 37px;
+    left: 95px;
+}
+
+.weapon {
+    top: 76px;
+    left: -2px;
+}
+
+.body {
+    top: 76px;
+    left: 54px;
+}
+
+.shield {
+    top: 76px;
+    left: 110px;
+}
+
+.legs {
+    top: 116px;
+    left: 54px;
+}
+
+.hands {
+    top: 156px;
+    left: -2px;
+}
+
+.feet {
+    top: 156px;
+    left: 54px;
+}
+
+.ring {
+    top: 156px;
+    left: 110px;
+}
+
+.item {
+    position: relative;
+    top: 4px;
+    left:4px
+}
