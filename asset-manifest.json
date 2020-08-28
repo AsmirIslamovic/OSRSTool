@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.0906da70.chunk.css",
-    "main.js": "/static/js/main.60cd8f46.chunk.js",
-    "main.js.map": "/static/js/main.60cd8f46.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1dbf960d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1dbf960d.js.map",
-    "static/js/2.2ece84c9.chunk.js": "/static/js/2.2ece84c9.chunk.js",
-    "static/js/2.2ece84c9.chunk.js.map": "/static/js/2.2ece84c9.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.06493933867bb540f71e80bc641527a0.js": "/precache-manifest.06493933867bb540f71e80bc641527a0.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.0906da70.chunk.css.map": "/static/css/main.0906da70.chunk.css.map",
-    "static/js/2.2ece84c9.chunk.js.LICENSE.txt": "/static/js/2.2ece84c9.chunk.js.LICENSE.txt"
+    "main.css": "/OSRSTool/static/css/main.0906da70.chunk.css",
+    "main.js": "/OSRSTool/static/js/main.60cd8f46.chunk.js",
+    "main.js.map": "/OSRSTool/static/js/main.60cd8f46.chunk.js.map",
+    "runtime-main.js": "/OSRSTool/static/js/runtime-main.5db4b217.js",
+    "runtime-main.js.map": "/OSRSTool/static/js/runtime-main.5db4b217.js.map",
+    "static/js/2.2ece84c9.chunk.js": "/OSRSTool/static/js/2.2ece84c9.chunk.js",
+    "static/js/2.2ece84c9.chunk.js.map": "/OSRSTool/static/js/2.2ece84c9.chunk.js.map",
+    "index.html": "/OSRSTool/index.html",
+    "precache-manifest.c681a646d145431d83e5d36e0ffd5bad.js": "/OSRSTool/precache-manifest.c681a646d145431d83e5d36e0ffd5bad.js",
+    "service-worker.js": "/OSRSTool/service-worker.js",
+    "static/css/main.0906da70.chunk.css.map": "/OSRSTool/static/css/main.0906da70.chunk.css.map",
+    "static/js/2.2ece84c9.chunk.js.LICENSE.txt": "/OSRSTool/static/js/2.2ece84c9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1dbf960d.js",
+    "static/js/runtime-main.5db4b217.js",
     "static/js/2.2ece84c9.chunk.js",
     "static/css/main.0906da70.chunk.css",
     "static/js/main.60cd8f46.chunk.js"
