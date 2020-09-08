@@ -7,45 +7,77 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 
 import { fetchItemsForSlot } from './api';
-import { EquipmentTree } from './components';
+import { EquipmentTree, EquipmentPicker, StatTotals } from './components';
 import styles from './App.module.css';
-
-const apiURL = "https://www.osrsbox.com/osrsbox-db/items-icons/";
 
 class App extends React.Component {
     state = {
-        itemId: 839,
         gear: {
-            Head:null,
-            Cape:null,
-            Neck:null,
-            Ammo:null,
-            Weapon:null,
-            Body:null,
-            Shield:null,
-            Legs:null, 
-            Hands:null,
-            Feet:null,
-            Ring:null},
+            head:null,
+            cape:null,
+            neck:null,
+            ammo:null,
+            weapon:null,
+            body:null,
+            shield:null,
+            legs:null, 
+            hands:null,
+            feet:null,
+            ring:null},
         selected:null,
     }
 
     async componentDidMount() {
-        const fetchedData = await fetchItemsForSlot("2h");
-
-        console.log(fetchedData);
+        //
     }
 
     handleSlotSelection = async(slot) => {
-        console.log("Picked: "+slot);
-        this.setState({selected:slot});
+        const fetchedData = await fetchItemsForSlot(slot);
+        this.setState({selected:slot,data:fetchedData});
+    }
+
+    handleEquipItem = (item) => {
+        switch (this.state.selected){
+            case "head":
+                this.setState({gear: { ...this.state.gear , head:item}});
+                break;
+            case "cape":
+                this.setState({gear: { ...this.state.gear , cape:item}});
+                break;
+            case "neck":
+                this.setState({gear: { ...this.state.gear , neck:item}});
+                break;
+            case "ammo":
+                this.setState({gear: { ...this.state.gear , ammo:item}});
+                break;
+            case "weapon":
+                this.setState({gear: { ...this.state.gear , weapon:item}});
+                break;
+            case "body":
+                this.setState({gear: { ...this.state.gear , body:item}});
+                break;
+            case "shield":
+                this.setState({gear: { ...this.state.gear , shield:item}});
+                break;
+            case "legs":
+                this.setState({gear: { ...this.state.gear , legs:item}});
+                break;
+            case "hands":
+                this.setState({gear: { ...this.state.gear , hands:item}});
+                break;
+            case "feet":
+                this.setState({gear: { ...this.state.gear , feet:item}});
+                break;
+            case "ring":
+                this.setState({gear: { ...this.state.gear , ring:item}});
+                break;
+            default:
+                break;
+        }
     }
     
     render() {
-        const { itemId,gear,selected,open } = this.state;
-        const itemURL = `${apiURL}${itemId}.png`;
-        gear.Head = itemURL;
-        gear.Ammo = itemURL;
+        const { gear,selected,data,open } = this.state;
         return (
             <div>
                 <Drawer
@@ -64,9 +96,16 @@ class App extends React.Component {
                     <Divider />
                 </Drawer>
                 <main className={styles.content}>
-                    <div>
+
+                    <div className={styles.top}>
                         <EquipmentTree gear={gear} selected={selected} handleSlotSelection={this.handleSlotSelection}/>
+                        <EquipmentPicker gear={gear} data={data} handleEquipItem={this.handleEquipItem}/>                        
                     </div>
+                    <Divider></Divider>
+                    <div className={styles.bottom}>
+                        <StatTotals gear={gear}></StatTotals>
+                    </div>
+
                     
                 </main>
             </div>

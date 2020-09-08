@@ -1,0 +1,44 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.attack {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.defence {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.icons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.values {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

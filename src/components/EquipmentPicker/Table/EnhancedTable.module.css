@@ -1,0 +1,11 @@
+.major_column {
+    border-left: 1px solid lightgrey;
+}
+
+.minor_column {
+    border-left: 1px solid lightgrey;
+}
+
+.icon {
+    padding-right: 10px;
+}

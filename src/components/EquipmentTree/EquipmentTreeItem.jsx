@@ -13,53 +13,60 @@ import defaultHandsImage from '../../images/Hands_slot.png'
 import defaultFeetImage from '../../images/Feet_slot.png'
 import defaultRingImage from '../../images/Ring_slot.png'
 
+const iconURL = "https://www.osrsbox.com/osrsbox-db/items-icons/";
+
 const EquipmentTreeItem = ({slot,item,selected,handleSlotSelection}) => {
     
     let itemSlotDefault=null;
     let className=null;
+    let itemURL = null;
+    if (item) {
+        itemURL = `${iconURL}${item.id}.png`;
+    }
+    
 
     switch (slot) {
-        case "Head":
+        case "head":
             itemSlotDefault = defaultHeadImage;
             className = styles.head;
             break;
-        case "Cape":
+        case "cape":
             itemSlotDefault = defaultCapeImage;
             className = styles.cape;
             break;
-        case "Neck":
+        case "neck":
             itemSlotDefault = defaultNeckImage;
             className = styles.neck;
             break;
-        case "Ammo":
+        case "ammo":
             itemSlotDefault = defaultAmmoImage;
             className = styles.ammo;
             break;
-        case "Weapon":
+        case "weapon":
             itemSlotDefault = defaultWeaponImage;
             className = styles.weapon;
             break;
-        case "Body":
+        case "body":
             itemSlotDefault = defaultBodyImage;
             className = styles.body;
             break;
-        case "Shield":
+        case "shield":
             itemSlotDefault = defaultShieldImage;
             className = styles.shield;
             break;
-        case "Legs":
+        case "legs":
             itemSlotDefault = defaultLegsImage;
             className = styles.legs;
             break;
-        case "Hands":
+        case "hands":
             itemSlotDefault = defaultHandsImage;
             className = styles.hands;
             break;
-        case "Feet":
+        case "feet":
             itemSlotDefault = defaultFeetImage;
             className = styles.feet;
             break;
-        case "Ring":
+        case "ring":
             itemSlotDefault = defaultRingImage;
             className = styles.ring;
             break;
@@ -69,7 +76,7 @@ const EquipmentTreeItem = ({slot,item,selected,handleSlotSelection}) => {
     
     return (
         <div className={[className,(slot === selected ? styles.selected_equipment : styles.equipment)].join(' ')} onClick={(e)=>handleSlotSelection(slot)}>
-            <img src={item ? item : itemSlotDefault} alt={slot} className={item ? styles.item: null}/>    
+            <img src={item ? itemURL : itemSlotDefault} alt={slot} className={item ? styles.item: null}/>    
         </div>
     );
     

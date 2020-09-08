@@ -12,10 +12,17 @@ title {
 
 .content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    flex-direction: column;
+    margin-left:100px;
 }
+
+.top {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 
 
 
