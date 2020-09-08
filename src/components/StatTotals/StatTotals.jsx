@@ -70,7 +70,7 @@ const StatTotals = ({gear}) => {
                     </div>
                     <Divider></Divider>
                     <div className={styles.icons}>
-                        <img src={strength_icon} alt="stab icon"/>
+                        <img src={stab_icon} alt="stab icon"/>
                         <img src={slash_icon} alt="slash icon"/>
                         <img src={crush_icon} alt="crush icon"/>
                         <img src={magic_icon} alt="magic icon"/>

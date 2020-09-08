@@ -64,31 +64,6 @@ const headCells = [
     { id: 'prayer', numeric: true, disablePadding: true, icon: prayer_icon }
 ];
 
-// slash_icon
-// crush_icon
-// magic_icon
-// ranged_icon
-// strength_icon
-// ranged_strength_icon
-// magic_damage_icon
-// prayer_icon
-
-
-// attack_stab: 0
-// attack_slash: 0
-// attack_crush: 0
-// attack_magic: 0
-// attack_ranged: 0
-// defence_stab: 0
-// defence_slash: 0
-// defence_crush: 0
-// defence_magic: 0
-// defence_ranged: 0
-// melee_strength: 0
-// ranged_strength: 0
-// magic_damage: 0
-// prayer: 0
-
 function EnhancedTableHead(props) {
   const { classes, order, orderBy, onRequestSort } = props;
   const createSortHandler = (property) => (event) => {
@@ -159,7 +134,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   container: {
-    maxHeight: 500,
+    height:400,
+    maxHeight: 400,
   },
   table: {
     minWidth: 750,
