@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/OSRSTool/static/css/main.2b1cbb48.chunk.css",
-    "main.js": "/OSRSTool/static/js/main.263b348c.chunk.js",
-    "main.js.map": "/OSRSTool/static/js/main.263b348c.chunk.js.map",
+    "main.css": "/OSRSTool/static/css/main.bfcb0bda.chunk.css",
+    "main.js": "/OSRSTool/static/js/main.ddc035ad.chunk.js",
+    "main.js.map": "/OSRSTool/static/js/main.ddc035ad.chunk.js.map",
     "runtime-main.js": "/OSRSTool/static/js/runtime-main.5db4b217.js",
     "runtime-main.js.map": "/OSRSTool/static/js/runtime-main.5db4b217.js.map",
-    "static/js/2.fab515c8.chunk.js": "/OSRSTool/static/js/2.fab515c8.chunk.js",
-    "static/js/2.fab515c8.chunk.js.map": "/OSRSTool/static/js/2.fab515c8.chunk.js.map",
+    "static/js/2.82386e88.chunk.js": "/OSRSTool/static/js/2.82386e88.chunk.js",
+    "static/js/2.82386e88.chunk.js.map": "/OSRSTool/static/js/2.82386e88.chunk.js.map",
     "index.html": "/OSRSTool/index.html",
-    "precache-manifest.0a21fc0f5fcbd10cb8684d24dd1f3aa3.js": "/OSRSTool/precache-manifest.0a21fc0f5fcbd10cb8684d24dd1f3aa3.js",
+    "precache-manifest.2424c40401ca91acf06798108f6b7649.js": "/OSRSTool/precache-manifest.2424c40401ca91acf06798108f6b7649.js",
     "service-worker.js": "/OSRSTool/service-worker.js",
-    "static/css/main.2b1cbb48.chunk.css.map": "/OSRSTool/static/css/main.2b1cbb48.chunk.css.map",
-    "static/js/2.fab515c8.chunk.js.LICENSE.txt": "/OSRSTool/static/js/2.fab515c8.chunk.js.LICENSE.txt"
+    "static/css/main.bfcb0bda.chunk.css.map": "/OSRSTool/static/css/main.bfcb0bda.chunk.css.map",
+    "static/js/2.82386e88.chunk.js.LICENSE.txt": "/OSRSTool/static/js/2.82386e88.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5db4b217.js",
-    "static/js/2.fab515c8.chunk.js",
-    "static/css/main.2b1cbb48.chunk.css",
-    "static/js/main.263b348c.chunk.js"
+    "static/js/2.82386e88.chunk.js",
+    "static/css/main.bfcb0bda.chunk.css",
+    "static/js/main.ddc035ad.chunk.js"
   ]
 }
