@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47c0d7a74c122b7376b6bb5794ef01ac",
+    "revision": "ff59be19d7b5479a8af95afafe58d3bd",
     "url": "/OSRSTool/index.html"
   },
   {
-    "revision": "d894d0ed56b87bf211f0",
-    "url": "/OSRSTool/static/css/main.cf4a902f.chunk.css"
+    "revision": "6423dabaab12f02f4b1e",
+    "url": "/OSRSTool/static/css/main.8a08cf48.chunk.css"
   },
   {
     "revision": "93ad42441945098d84c0",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OSRSTool/static/js/2.92b0666b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d894d0ed56b87bf211f0",
-    "url": "/OSRSTool/static/js/main.953d4fa2.chunk.js"
+    "revision": "6423dabaab12f02f4b1e",
+    "url": "/OSRSTool/static/js/main.8861a0c5.chunk.js"
   },
   {
     "revision": "5a33b50cd877f39c6a69",
