@@ -11,21 +11,30 @@ import { EquipmentTree, EquipmentPicker, StatTotals } from './components';
 import styles from './App.module.css';
 
 class App extends React.Component {
-    state = {
-        gear: {
-            head:null,
-            cape:null,
-            neck:null,
-            ammo:null,
-            weapon:null,
-            body:null,
-            shield:null,
-            legs:null, 
-            hands:null,
-            feet:null,
-            ring:null},
-        selected:null,
-    }
+
+    initialGear  = {
+        head:null,
+        cape:null,
+        neck:null,
+        ammo:null,
+        weapon:null,
+        body:null,
+        shield:null,
+        legs:null, 
+        hands:null,
+        feet:null,
+        ring:null,
+    };
+
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            gear: this.initialGear,
+            selected:null,
+            savedGear: localStorage.getItem("savedGear") ? JSON.parse(localStorage.getItem("savedGear")) : [],
+        }
+      }
 
     async componentDidMount() {
         //
@@ -34,6 +43,25 @@ class App extends React.Component {
     handleSlotSelection = async(slot) => {
         const fetchedData = await fetchItemsForSlot(slot);
         this.setState({selected:slot,data:fetchedData});
+        console.log(this.state);
+    }
+
+    handleSaveGear = (name) => {
+        this.state.savedGear.push({name, gear:this.state.gear});
+        localStorage.setItem('savedGear', JSON.stringify(this.state.savedGear));
+    }
+
+    handleLoadGear = (id) => {
+        console.log(id);
+        if(Number.isInteger(id)) {
+            this.setState({
+                gear: this.state.savedGear[id].gear,
+                selected:null,
+                data:null,
+            });
+        } else {
+            this.setState({gear: this.initialGear});
+        }
     }
 
     handleEquipItem = (item) => {
@@ -77,7 +105,7 @@ class App extends React.Component {
     }
     
     render() {
-        const { gear,selected,data,open } = this.state;
+        const { gear,selected,data,open,savedGear } = this.state;
         return (
             <div>
                 <Drawer
@@ -98,7 +126,7 @@ class App extends React.Component {
                 <main className={styles.content}>
 
                     <div className={styles.top}>
-                        <EquipmentTree gear={gear} selected={selected} handleSlotSelection={this.handleSlotSelection}/>
+                        <EquipmentTree gear={gear} selected={selected} handleSlotSelection={this.handleSlotSelection} handleSaveGear={this.handleSaveGear} handleLoadGear={this.handleLoadGear} savedGear={savedGear} />
                         <EquipmentPicker gear={gear} data={data} handleEquipItem={this.handleEquipItem}/>                        
                     </div>
                     <Divider></Divider>
@@ -106,11 +134,11 @@ class App extends React.Component {
                         <StatTotals gear={gear}></StatTotals>
                     </div>
 
-                    
+
                 </main>
             </div>
         )
     }
 }
 
-export default App
+export default App;
